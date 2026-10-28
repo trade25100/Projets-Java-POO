@@ -1,28 +1,26 @@
-# 01 — Gestion bibliothèque
+# Projet 01 — Gestion d’une bibliothèque (version finale)
 
-**Difficulté :** Facile
+Application Java 17+ en console, sans dépendances externes.
 
-## Fonctionnalités à implémenter
-- [ ] Ajouter et rechercher des livres
-- [ ] Inscrire des utilisateurs
-- [ ] Emprunter et retourner un livre
-- [ ] Vérifier la disponibilité
+## Fonctionnalités
+- Ajouter et rechercher des livres par titre, auteur ou ISBN
+- Inscrire des utilisateurs
+- Emprunter et retourner des livres
+- Empêcher les emprunts simultanés et les doublons ISBN/ID
+- Afficher les disponibilités et l’historique des emprunts
+- Validation des données et gestion des exceptions
 
-## Classes suggérées
-- `Livre`
-- `Utilisateur`
-- `Emprunt`
-- `Bibliotheque`
+## Exécuter
+Depuis le dossier `bibliotheque-version-finale` :
 
-## Exécution
 ```bash
 javac -encoding UTF-8 -d out src/*.java
 java -cp out Main
 ```
 
-## Défis POO
-- Ajouter des attributs privés et des constructeurs.
-- Écrire des méthodes métier et valider les données.
-- Utiliser des collections et gérer les erreurs.
-- Introduire héritage, interfaces ou polymorphisme lorsque pertinent.
-- Écrire des tests manuels puis automatisés.
+## Tests
+```bash
+java -ea -cp out TestBibliotheque
+```
+
+Les données sont conservées en mémoire pendant l’exécution, sans base de données.
